@@ -19,5 +19,6 @@
         {
             "url": "https://github.com/heroku/heroku-buildpack-ruby"
         }
-    ]
+    ],
+    "addons": ["papertrail"]
 }
