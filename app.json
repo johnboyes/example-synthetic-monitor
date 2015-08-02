@@ -1,0 +1,23 @@
+{
+    "name": "Example Synthetic Monitor",
+    "description": "A working example of website synthetic monitoring using the synthetic_monitor gem",
+    "repository": "https://github.com/johnboyes/example-synthetic-monitor",
+    "keywords": [
+        "ruby",
+        "synthetic monitoring"
+    ],
+    "env": {
+        "SLACK_WEBHOOK_URL": {
+            "description": "webhook URL for Slack notifications - see https://api.slack.com/incoming-webhooks",
+            "value": "change_me to a Slack webhook URL"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+        },
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-ruby"
+        }
+    ]
+}
