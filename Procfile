@@ -1,0 +1,1 @@
+worker: bundle exec ruby example_synthetic_monitor.rb
