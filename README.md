@@ -11,6 +11,7 @@ cd name-of-your-fork
 bundle
 foreman start
 ```
+[More info on foreman](https://devcenter.heroku.com/articles/procfile#developing-locally-with-foreman)
 
 ## Deploying to Heroku
 
