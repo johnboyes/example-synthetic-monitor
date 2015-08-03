@@ -23,6 +23,12 @@ spec_slack_pairs = {
 SyntheticMonitor.new.monitor_on_varying_slack_channels spec_slack_pairs
 ```
 
+The monitoring frequency is customisable:
+
+```ruby
+SyntheticMonitor.new(frequency_in_minutes: 10).monitor
+```
+
 There is just the one spec in this example repository:
 
 ```ruby
