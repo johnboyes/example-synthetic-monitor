@@ -3,7 +3,7 @@ A **working example of website synthetic monitoring** using the [synthetic_monit
 
 The application is **deployable on Heroku** (see below) which makes it **very quick to get production monitoring up and running**, and the fact that the tests are **plain old [RSpec](http://rspec.info/) tests** means that your checks are much more **easily customised** to your needs than most monitoring solutions.
 
-Run all the specs in the 'spec' folder by default, every 5 minutes, and **notify any failures to a [Slack](https://slack.com/) channel or group** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)).
+Run all the specs in the 'spec' folder by default, every 5 minutes, and **notify any failures on a [Slack](https://slack.com/) channel or group** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)).
 
 ```ruby
 SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
@@ -11,7 +11,7 @@ SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
 
 
-Alternatively you can have individual spec files notify to an individual Slack channel or group:
+Alternatively you can have individual spec files notify an individual Slack channel or group:
 
 ```ruby
 spec_slack_pairs = {
