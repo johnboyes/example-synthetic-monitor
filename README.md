@@ -1,7 +1,11 @@
 # example-synthetic-monitor
 A working example of website synthetic monitoring using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
-It uses [RSpec](http://rspec.info/) and runs all the specs in the 'spec' folder by default, every 5 minutes, and notifies any failures to a [Slack](https://slack.com/) channel or group:
+It uses [RSpec](http://rspec.info/) and runs all the specs in the 'spec' folder by default, every 5 minutes, and notifies any failures to a [Slack](https://slack.com/) channel or group.
+
+The application is deployable on Heroku (see below) which makes it very quick to get production monitoring up and running, and the fact that the tests are plain old RSpec tests means that your checks are much more easily customised to your needs than most monitoring solutions.
+
+The monitoring code is as simple as:
 
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
 ```ruby
