@@ -13,7 +13,7 @@ SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
 
 
-Alternatively you can have individual spec files notify an individual Slack channel or group:
+Alternatively you can specify individual Slack notification channels or groups for individual spec files:
 
 ```ruby
 spec_slack_pairs = {
