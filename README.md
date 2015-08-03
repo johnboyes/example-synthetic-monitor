@@ -23,7 +23,7 @@ spec_slack_pairs = {
 SyntheticMonitor.new.monitor_on_varying_slack_channels spec_slack_pairs
 ```
 
-There is only one spec in this example repository:
+There is just the one spec in this example repository:
 
 ```ruby
 scenario "monitor example.com" do
