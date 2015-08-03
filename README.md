@@ -1,5 +1,5 @@
 # example-synthetic-monitor
-A working example of website synthetic monitoring using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
+A **working example of website synthetic monitoring** using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
 It uses [RSpec](http://rspec.info/) and runs all the specs in the 'spec' folder by default, every 5 minutes, and notifies any failures to a [Slack](https://slack.com/) channel or group.
 
