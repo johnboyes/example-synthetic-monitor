@@ -1,7 +1,7 @@
 # example-synthetic-monitor
 A working example of website synthetic monitoring using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
-It runs all the specs in folder in the 'spec' folder by default, and notifies any failures to a [Slack](https://slack.com/) channel or group:
+It runs all the specs in the 'spec' folder by default, every 5 minutes, and notifies any failures to a [Slack](https://slack.com/) channel or group:
 
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
 
