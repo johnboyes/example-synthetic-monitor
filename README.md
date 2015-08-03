@@ -23,10 +23,6 @@ scenario "monitor example.com" do
 end
 ```
 
-## Coming soon
-- [SMS notifications](https://github.com/johnboyes/synthetic-monitor/issues/1)
-- [Attach a screenshot to each notification](https://github.com/johnboyes/synthetic-monitor/issues/2)
-
 ## Running Locally
 
 Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.io) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
@@ -55,3 +51,7 @@ For more information about using Ruby on Heroku, see these Dev Center articles:
 - [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
 - [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby)
 - [Heroku Ruby Support](https://devcenter.heroku.com/articles/ruby-support)
+
+## Coming soon
+- [SMS notifications](https://github.com/johnboyes/synthetic-monitor/issues/1)
+- [Attach a screenshot to each notification](https://github.com/johnboyes/synthetic-monitor/issues/2)
