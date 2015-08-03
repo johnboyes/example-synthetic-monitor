@@ -6,8 +6,6 @@ A working example of website synthetic monitoring using the [synthetic_monitor g
 ```
 heroku create
 git push heroku master
-heroku run rake db:migrate
-heroku open
 ```
 
 Alternatively, you can deploy your own copy of the app using the web-based flow:
