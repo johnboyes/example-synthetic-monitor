@@ -1,6 +1,13 @@
 # example-synthetic-monitor
 A working example of website synthetic monitoring using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
+It runs all the specs in folder in the 'spec' folder by default, and notifies any failures to a [Slack](https://slack.com/) channel or group:
+
+```ruby
+require 'synthetic_monitor'
+SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
+```
+
 ## Running Locally
 
 Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.io) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
