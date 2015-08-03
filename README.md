@@ -9,6 +9,17 @@ It runs all the specs in the 'spec' folder by default, every 5 minutes, and noti
 require 'synthetic_monitor'
 SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
 ```
+There is only one spec in this example:
+
+([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/3543655f8d5c09295d1ed2ec456f0d731bec086c/spec/example_spec.rb#L13-L17)
+
+```ruby
+scenario "monitor example.com" do
+  @session.visit 'https://www.example.com'
+  expect(@session).to have_content("This domain is established to be used for illustrative examples in documents.")
+  expect(@session.status_code).to eq(200)
+end
+```
 
 ## Running Locally
 
