@@ -20,7 +20,7 @@ end
 ```
 
 ## Coming soon
-[SMS notifications](johnboyes/synthetic-monitor#1)
+[SMS notifications](https://github.com/johnboyes/synthetic-monitor/issues/1)
 
 ## Running Locally
 
