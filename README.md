@@ -8,7 +8,7 @@ It uses [RSpec](http://rspec.info/) and runs all the specs in the 'spec' folder 
 require 'synthetic_monitor'
 SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
 ```
-There is only one spec in this example:
+There is only one spec in this example repository:
 
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/3543655f8d5c09295d1ed2ec456f0d731bec086c/spec/example_spec.rb#L13-L17))
 ```ruby
