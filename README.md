@@ -2,7 +2,7 @@
 A **working example of website [synthetic monitoring](https://en.wikipedia.org/wiki/Synthetic_monitoring)** using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
 This example application is:
-- **deployable on Heroku** (see below) which makes it **very quick to get production monitoring up and running**
+- **deployable on [Heroku](https://www.heroku.com/)** (see below) which makes it **very quick to get production monitoring up and running**
 - specified using **plain old [RSpec](http://rspec.info/) tests**, which means that it is much more **easily customised** to your needs than most monitoring solutions.
 
 It runs all the specs in the 'spec' folder, every 5 minutes, and **notifies any failures on a [Slack](https://slack.com/) channel or group** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)):
