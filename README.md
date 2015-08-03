@@ -4,7 +4,6 @@ A working example of website synthetic monitoring using the [synthetic_monitor g
 It runs all the specs in the 'spec' folder by default, every 5 minutes, and notifies any failures to a [Slack](https://slack.com/) channel or group:
 
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
-
 ```ruby
 require 'synthetic_monitor'
 SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
@@ -12,7 +11,6 @@ SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
 There is only one spec in this example:
 
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/3543655f8d5c09295d1ed2ec456f0d731bec086c/spec/example_spec.rb#L13-L17))
-
 ```ruby
 scenario "monitor example.com" do
   @session.visit 'https://www.example.com'
