@@ -10,6 +10,7 @@ SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
 ```
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
 
+
 Alternatively you can have individual spec files notify to an individual Slack channel or group:
 
 ```ruby
@@ -32,6 +33,7 @@ scenario "monitor example.com" do
 end
 ```
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/3543655f8d5c09295d1ed2ec456f0d731bec086c/spec/example_spec.rb#L13-L17))
+
 
 ## Running Locally
 
