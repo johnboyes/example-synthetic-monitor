@@ -42,6 +42,10 @@ end
 ```
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/3543655f8d5c09295d1ed2ec456f0d731bec086c/spec/example_spec.rb#L13-L17))
 
+## Prerequisites
+- You must have [setup at least one Slack webhook](https://api.slack.com/incoming-webhooks) to send notifications to.
+- [PhantomJS](https://github.com/teampoltergeist/poltergeist#installing-phantomjs)
+
 
 ## Running Locally
 
