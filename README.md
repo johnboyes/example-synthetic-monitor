@@ -1,5 +1,5 @@
 # example-synthetic-monitor
-A **working example of website synthetic monitoring** using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
+A **working example of website [synthetic monitoring](https://en.wikipedia.org/wiki/Synthetic_monitoring)** using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
 This example application is:
 - **deployable on Heroku** (see below) which makes it **very quick to get production monitoring up and running**
