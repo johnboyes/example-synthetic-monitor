@@ -19,6 +19,9 @@ scenario "monitor example.com" do
 end
 ```
 
+## Coming soon
+[SMS notifications](johnboyes/synthetic-monitor/issues/1)
+
 ## Running Locally
 
 Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.io) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
