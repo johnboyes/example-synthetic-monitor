@@ -2,11 +2,12 @@
 A working example of website synthetic monitoring using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
 It runs all the specs in folder in the 'spec' folder by default, and notifies any failures to a [Slack](https://slack.com/) channel or group:
-[jump to code](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3)
+
 ```ruby
 require 'synthetic_monitor'
 SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
 ```
+([jump to code](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
 
 ## Running Locally
 
