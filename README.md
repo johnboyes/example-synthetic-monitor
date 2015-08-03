@@ -1,6 +1,17 @@
 # example-synthetic-monitor
 A working example of website synthetic monitoring using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
+## Running Locally
+
+Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.io) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+
+```sh
+clone your own fork of this repository
+cd name-of-your-fork
+bundle
+foreman start
+```
+
 ## Deploying to Heroku
 
 ```
