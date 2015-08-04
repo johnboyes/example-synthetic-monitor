@@ -42,6 +42,10 @@ end
 ```
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/3543655f8d5c09295d1ed2ec456f0d731bec086c/spec/example_spec.rb#L13-L17))
 
+## Prerequisites
+- You must have [setup at least one Slack webhook](https://api.slack.com/incoming-webhooks) to send notifications to.
+- [PhantomJS](https://github.com/teampoltergeist/poltergeist#installing-phantomjs)
+
 
 ## Running Locally
 
@@ -51,6 +55,13 @@ Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.i
 clone your own fork of this repository
 cd name-of-your-fork
 bundle
+```
+Create a .env file with the following content, replacing "put_a_slack_webhook_url_here" with your own Slack webhook:
+```
+SLACK_WEBHOOK_URL=put_a_slack_webhook_url_here
+```
+and finally:
+```sh
 foreman start
 ```
 [More info on foreman](https://devcenter.heroku.com/articles/procfile#developing-locally-with-foreman)
@@ -58,7 +69,10 @@ foreman start
 ## Deploying to Heroku
 
 ```
-heroku create
+heroku create --region eu
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby
+heroku buildpacks:add https://github.com/stomita/heroku-buildpack-phantomjs
+heroku config:set SLACK_WEBHOOK_URL=put_a_slack_webhook_url_here
 git push heroku master
 ```
 
