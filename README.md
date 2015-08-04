@@ -69,7 +69,9 @@ foreman start
 ## Deploying to Heroku
 
 ```
-heroku create
+heroku create --region eu
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby
+heroku buildpacks:add https://github.com/stomita/heroku-buildpack-phantomjs
 git push heroku master
 ```
 
