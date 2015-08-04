@@ -72,6 +72,7 @@ foreman start
 heroku create --region eu
 heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby
 heroku buildpacks:add https://github.com/stomita/heroku-buildpack-phantomjs
+heroku config:set SLACK_WEBHOOK_URL=put_a_slack_webhook_url_here
 git push heroku master
 ```
 
