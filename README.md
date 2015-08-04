@@ -8,7 +8,7 @@ This example application is:
 It runs all the specs in the 'spec' folder, every 5 minutes, and **notifies any failures on a [Slack](https://slack.com/) channel or group** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)):
 
 ```ruby
-SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK_URL']
+SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK']
 ```
 ([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/a8ede4c99801170ffa22faf575854adf091d574a/example_synthetic_monitor.rb#L1-L3))
 
@@ -17,9 +17,9 @@ Alternatively you can specify individual Slack notification channels or groups f
 
 ```ruby
 spec_slack_pairs = {
-  'spec/a_spec.rb' => ENV['A_SlACK_WEBHOOK_URL'], 
-  'spec/another_spec.rb' => ENV['A_DIFFERENT_SLACK_WEBHOOK_URL'],
-  'spec/a_third_spec.rb' => ENV['A_THIRD_SLACK_WEBHOOK_URL'],
+  'spec/a_spec.rb' => ENV['A_SlACK_WEBHOOK'], 
+  'spec/another_spec.rb' => ENV['A_DIFFERENT_SLACK_WEBHOOK'],
+  'spec/a_third_spec.rb' => ENV['A_THIRD_SLACK_WEBHOOK'],
 }
 
 SyntheticMonitor.new.monitor_on_varying_slack_channels spec_slack_pairs
@@ -58,7 +58,7 @@ bundle
 ```
 Create a .env file with the following content, replacing "put_a_slack_webhook_url_here" with your own Slack webhook:
 ```
-SLACK_WEBHOOK_URL=put_a_slack_webhook_url_here
+SLACK_WEBHOOK=put_a_slack_webhook_url_here
 ```
 and finally:
 ```sh
@@ -72,7 +72,7 @@ foreman start
 heroku create --region eu
 heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby
 heroku buildpacks:add https://github.com/stomita/heroku-buildpack-phantomjs
-heroku config:set SLACK_WEBHOOK_URL=put_a_slack_webhook_url_here
+heroku config:set SLACK_WEBHOOK=put_a_slack_webhook_url_here
 git push heroku master
 ```
 
