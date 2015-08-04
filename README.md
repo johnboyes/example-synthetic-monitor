@@ -74,11 +74,14 @@ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby
 heroku buildpacks:add https://github.com/stomita/heroku-buildpack-phantomjs
 heroku config:set SLACK_WEBHOOK=put_a_slack_webhook_url_here
 git push heroku master
+heroku ps:scale worker=1
 ```
 
 Alternatively, you can deploy your own copy of the app using the web-based flow:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+You will need to scale your worker process to 1 dyno, and then the monitoring will automatically start running.
 
 For more information about using Ruby on Heroku, see these Dev Center articles:
 
