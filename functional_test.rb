@@ -17,6 +17,8 @@ require 'hashdiff'
       foreman_thread.exit
   	  expected_response_body = {"attachments"=> [{"fallback"=>"ALERT: 1 test failed", "color"=>"danger", "title"=>"ALERT: 1 test failed", "fields"=> [{"title"=>"example example of a test which will fail, triggering a notification on Slack", "value"=>"\n\nexpected: 500\n     got: 200\n\n(compared using ==)\n\n# ./spec/example_spec.rb:19\n==================================================="}]}]}
 	  assert HashDiff.diff(expected_response_body, JSON.parse(mirage.requests(1).body)) == []
+      #temporarily fail test to check that Snap CI GitHub status badge is functioning correctly
+	  assert false
   	  Mirage.stop
     end
  
