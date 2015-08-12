@@ -10,10 +10,15 @@ feature "example" do
   	@session = Capybara::Session.new(:poltergeist)
   end
 
-  scenario "monitor example.com" do
+  scenario "example of a test which will pass, meaning no notification is sent to Slack" do
     @session.visit 'https://www.example.com'
     expect(@session).to have_content("This domain is established to be used for illustrative examples in documents.")
     expect(@session.status_code).to eq(200)
+  end
+
+  scenario "example of a test which will fail, triggering a notification on Slack" do
+    @session.visit 'https://www.example.com'
+    expect(@session.status_code).to eq(500)
   end
 
   after(:all) do
