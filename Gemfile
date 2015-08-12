@@ -9,4 +9,5 @@ group :test do
   gem 'foreman'
   gem 'mirage'
   gem 'pry'
+  gem 'hashdiff'
 end
