@@ -23,6 +23,7 @@ require 'hashdiff'
     end
 
     def teardown
+      @mirage.clear
       Mirage.stop
     end
  
