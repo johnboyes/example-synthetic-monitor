@@ -46,6 +46,7 @@ end
 
 ## Prerequisites
 - You must have [setup at least one Slack webhook](https://api.slack.com/incoming-webhooks) to send notifications to.
+  If you are not on Slack you can signup for free at https://slack.com/
 - [PhantomJS](https://github.com/teampoltergeist/poltergeist#installing-phantomjs)
 
 
