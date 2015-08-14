@@ -7,7 +7,7 @@ This example application is:
 - **deployable on [Heroku](https://www.heroku.com/)** (see below) which makes it **very quick to get production monitoring up and running**
 - specified using **plain old [RSpec](http://rspec.info/) tests**, which means that it is much more **easily customised** to your needs than most monitoring solutions.
 
-It runs all the specs in the 'spec' folder, every 5 minutes, and **notifies any failures on a [Slack](https://slack.com/) channel or group** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)):
+It **runs all the specs in the 'spec' folder every 5 minutes**, and **notifies any failures on a [Slack](https://slack.com/) channel or group** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)):
 
 ```ruby
 SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK']
@@ -33,16 +33,27 @@ The monitoring frequency is customisable:
 SyntheticMonitor.new(frequency_in_minutes: 10).monitor
 ```
 
-There is just the one spec in this example repository:
+There are two monitoring specs in this example repository:
 
 ```ruby
-scenario "monitor example.com" do
+scenario "example of a test which will pass, meaning no notification is sent to Slack" do
   @session.visit 'https://www.example.com'
   expect(@session).to have_content("This domain is established to be used for illustrative examples in documents.")
   expect(@session.status_code).to eq(200)
 end
 ```
-([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/3543655f8d5c09295d1ed2ec456f0d731bec086c/spec/example_spec.rb#L13-L17))
+([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/070042685e62c837ac63412ec2424942bae2e107/spec/example_spec.rb#L13-L17))
+
+and
+
+```ruby
+scenario "example of a test which will fail, triggering a notification on Slack" do
+  @session.visit 'https://www.example.com'
+  expect(@session.status_code).to eq(500)
+end
+```
+([jump to this code snippet](https://github.com/johnboyes/example-synthetic-monitor/blob/070042685e62c837ac63412ec2424942bae2e107/spec/example_spec.rb#L19-L22))
+
 
 ## Prerequisites
 - You must have [setup at least one Slack webhook](https://api.slack.com/incoming-webhooks) to send notifications to.
