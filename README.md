@@ -98,6 +98,12 @@ For more information about using Ruby on Heroku, see these Dev Center articles:
 - [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby)
 - [Heroku Ruby Support](https://devcenter.heroku.com/articles/ruby-support)
 
+## Running the [functional tests](functional_test/README.md)
+
+```ruby
+bundle exec rake test
+```
+
 ## Coming soon
 - [SMS notifications](https://github.com/johnboyes/synthetic-monitor/issues/1)
 - [Attach a screenshot to each notification](https://github.com/johnboyes/synthetic-monitor/issues/2)
