@@ -19,13 +19,17 @@ require 'hashdiff'
       assert_equal [], HashDiff.diff(expected, actual)
   	end
 
+    def retryable &block
+      begin
+        yield
+      rescue
+        retry
+      end
+    end
+
   	def test_one_test_fails_and_notifies_on_slack
   	  @foreman_thread = Thread.new {`foreman start`}
-  	  begin 
-  	  	assert_hashes_equal @expected_request_body_sent_to_slack, JSON.parse(@mirage.requests(1).body)
-  	  rescue
-  	  	retry
-  	  end
+  	  retryable { assert_hashes_equal @expected_request_body_sent_to_slack, JSON.parse(@mirage.requests(1).body) }
     end
 
     def teardown
