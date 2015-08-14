@@ -16,7 +16,7 @@ require 'hashdiff'
   	end
 
   	def assert_hashes_equal(expected, actual)
-      assert HashDiff.diff(expected, actual) == []
+      assert_equal [], HashDiff.diff(expected, actual)
   	end
 
   	def test_one_test_fails_and_notifies_on_slack
