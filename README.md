@@ -71,13 +71,6 @@ Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.i
 clone your own fork of this repository
 cd name-of-your-fork
 bundle
-```
-Create a .env file with the following content, replacing "put_a_slack_webhook_url_here" with your own Slack webhook:
-```
-SLACK_WEBHOOK=put_a_slack_webhook_url_here
-```
-and finally:
-```sh
 foreman start
 ```
 [More info on foreman](https://devcenter.heroku.com/articles/procfile#developing-locally-with-foreman)
