@@ -9,9 +9,9 @@ Capybara.configure do |c|
   c.default_driver = :poltergeist
 end
 
- Capybara.register_driver :poltergeist do |app|
-   Capybara::Poltergeist::Driver.new(app, timeout: 1000)
- end
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, timeout: 1000)
+end
 
 # Below is a workaround for sporadic timeout errors, taken from https://gist.github.com/afn/c04ccfe71d648763b306
 # Also see https://github.com/ariya/phantomjs/issues/12234

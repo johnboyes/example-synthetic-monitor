@@ -7,7 +7,7 @@ require 'spec_helper'
 feature "example" do
 
   before(:all) do
-  	@session = Capybara::Session.new(:poltergeist)
+    @session = Capybara::Session.new(:poltergeist)
   end
 
   scenario "example of a test which will pass, meaning no notification is sent to Slack" do
