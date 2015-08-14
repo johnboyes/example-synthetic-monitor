@@ -10,4 +10,5 @@ group :test do
   gem 'mirage'
   gem 'pry'
   gem 'hashdiff'
+  gem 'rake'
 end
