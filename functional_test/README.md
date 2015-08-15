@@ -1,4 +1,4 @@
-# functional tests
+# functional test
 
 Tests in this directory functionally test the application - they are not part of the monitoring production code.
 
