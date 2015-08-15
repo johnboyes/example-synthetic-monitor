@@ -7,7 +7,7 @@ This example application is:
 - **deployable on [Heroku](https://www.heroku.com/)** (see below) which makes it **very quick to get production monitoring up and running**
 - specified using **plain old [RSpec](http://rspec.info/) tests**, which means that it is much more **easily customised** to your needs than most monitoring solutions.
 
-It **runs all the specs in the 'spec' folder every 5 minutes**, and **notifies any failures on [Slack](https://slack.com/)** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)):
+It **runs all the specs in the ['spec' directory](spec) every 5 minutes**, and **notifies any failures on [Slack](https://slack.com/)** (with [SMS notifications coming soon](https://github.com/johnboyes/synthetic-monitor/issues/1)):
 
 ```ruby
 SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK']
@@ -98,7 +98,7 @@ For more information about using Ruby on Heroku, see these Dev Center articles:
 - [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby)
 - [Heroku Ruby Support](https://devcenter.heroku.com/articles/ruby-support)
 
-## Running the [functional tests](functional_test/README.md)
+## Running the [functional tests](functional_test)
 
 ```ruby
 bundle exec rake test
