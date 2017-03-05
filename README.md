@@ -1,5 +1,5 @@
 # example-synthetic-monitor
-[![Build Status](https://snap-ci.com/johnboyes/example-synthetic-monitor/branch/master/build_image)](https://snap-ci.com/johnboyes/example-synthetic-monitor/branch/master)
+[![Build status](https://circleci.com/gh/johnboyes/example-synthetic-monitor.svg?style=svg)](https://circleci.com/gh/johnboyes/example-synthetic-monitor)
 
 A **working example of website [synthetic monitoring](https://en.wikipedia.org/wiki/Synthetic_monitoring)** using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
@@ -19,7 +19,7 @@ Alternatively you can specify individual Slack notification channels or groups f
 
 ```ruby
 spec_slack_pairs = {
-  'spec/a_spec.rb' => ENV['A_SlACK_WEBHOOK'], 
+  'spec/a_spec.rb' => ENV['A_SlACK_WEBHOOK'],
   'spec/another_spec.rb' => ENV['A_DIFFERENT_SLACK_WEBHOOK'],
   'spec/a_third_spec.rb' => ENV['A_THIRD_SLACK_WEBHOOK'],
 }
