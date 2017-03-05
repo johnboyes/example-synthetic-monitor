@@ -8,7 +8,6 @@ group :test do
   gem 'minitest'
   gem 'foreman'
   gem 'mirage'
-  gem 'pry'
   gem 'hashdiff'
   gem 'rake'
 end

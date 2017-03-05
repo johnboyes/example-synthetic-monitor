@@ -1,0 +1,7 @@
+require 'minitest/autorun'
+require 'minitest/spec'
+require 'synthetic_monitor'
+require 'mirage/client'
+require 'json'
+require 'hashdiff'
+require 'foreman/test'
