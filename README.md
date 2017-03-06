@@ -1,5 +1,6 @@
 # example-synthetic-monitor
-[![Build status](https://circleci.com/gh/johnboyes/example-synthetic-monitor.svg?style=svg)](https://circleci.com/gh/johnboyes/example-synthetic-monitor)
+[![Build Status](https://circleci.com/gh/johnboyes/example-synthetic-monitor.svg?style=shield)](https://circleci.com/gh/johnboyes/example-synthetic-monitor)
+[![Dependency Status](https://gemnasium.com/badges/github.com/johnboyes/example-synthetic-monitor.svg)](https://gemnasium.com/github.com/johnboyes/example-synthetic-monitor)
 
 A **working example of website [synthetic monitoring](https://en.wikipedia.org/wiki/Synthetic_monitoring)** using the [synthetic_monitor gem](https://github.com/johnboyes/synthetic-monitor).
 
