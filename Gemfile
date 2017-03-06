@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.0'
+ruby '2.4.0'
 
 gem 'synthetic_monitor', :git => 'https://github.com/johnboyes/synthetic-monitor.git'
 gem 'poltergeist'
