@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.4.0'
 
-gem 'synthetic_monitor', :git => 'https://github.com/johnboyes/synthetic-monitor.git'
 gem 'poltergeist'
+gem 'synthetic_monitor', git: 'https://github.com/johnboyes/synthetic-monitor.git'
 
 group :test do
-  gem 'minitest'
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'foreman'
-  gem 'mirage'
   gem 'hashdiff'
+  gem 'minitest'
+  gem 'mirage'
   gem 'rake'
-  gem "simplecov"
-  gem "codeclimate-test-reporter", "~> 1.0.0"
+  gem 'simplecov'
 end
