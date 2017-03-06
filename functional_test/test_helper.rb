@@ -1,4 +1,6 @@
-require "simplecov"
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.configure { |config| config.path_prefix = 'app' }
+require 'simplecov'
 SimpleCov.start
 require 'minitest/autorun'
 require 'minitest/spec'
