@@ -12,8 +12,8 @@ class FunctionalTest < Minitest::Test
     @expected_slack_notification_request_body = {"attachments"=> [{"fallback"=>"ALERT: 1 test failed", "color"=>"danger", "title"=>"ALERT: 1 test failed", "fields"=> [{"title"=>"failing test example example of a test which will fail, triggering a notification on Slack", "value"=>"\n\nexpected: 500\n     got: 200\n\n(compared using ==)\n\n# ./spec/failure_spec.rb:13\n==================================================="}]}]}
   end
 
-  def test_run_all_specs
-    @monitor_thread = Thread.new { SyntheticMonitor.new.monitor ENV['SLACK_WEBHOOK'] }
+  def test_run_app_which_then_runs_all_specs
+    @monitor_thread = Thread.new { `foreman start` }
     assert_notification_sent_to_slack
     assert_no_success_notification_sent
   end
@@ -34,6 +34,7 @@ class FunctionalTest < Minitest::Test
   end
 
   def teardown
+    @monitor_thread.exit
     @mirage.clear
     Mirage.stop
   end
