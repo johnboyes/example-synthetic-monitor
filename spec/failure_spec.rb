@@ -1,7 +1,3 @@
-require 'rspec'
-require 'capybara/rspec'
-require 'capybara/poltergeist'
-require 'capybara/dsl'
 require 'spec_helper'
 
 feature 'failing test example' do

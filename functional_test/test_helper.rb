@@ -76,7 +76,7 @@ def expected_slack_value_field
 
     (compared using ==)
 
-    # ./spec/failure_spec.rb:12
+    # ./spec/failure_spec.rb:8
     ===================================================
   HEREDOC
 end
