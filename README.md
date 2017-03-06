@@ -1,5 +1,6 @@
 # example-synthetic-monitor
 [![Build Status](https://circleci.com/gh/johnboyes/example-synthetic-monitor.svg?style=shield)](https://circleci.com/gh/johnboyes/example-synthetic-monitor)
+[![Test Coverage](https://codeclimate.com/github/johnboyes/example-synthetic-monitor/badges/coverage.svg)](https://codeclimate.com/github/johnboyes/example-synthetic-monitor/coverage)
 [![Code Climate](https://codeclimate.com/github/johnboyes/example-synthetic-monitor/badges/gpa.svg)](https://codeclimate.com/github/johnboyes/example-synthetic-monitor)
 [![Dependency Status](https://gemnasium.com/badges/github.com/johnboyes/example-synthetic-monitor.svg)](https://gemnasium.com/github.com/johnboyes/example-synthetic-monitor)
 

@@ -1,3 +1,5 @@
+require "simplecov"
+SimpleCov.start
 require 'minitest/autorun'
 require 'minitest/spec'
 require 'synthetic_monitor'

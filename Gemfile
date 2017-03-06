@@ -10,4 +10,6 @@ group :test do
   gem 'mirage'
   gem 'hashdiff'
   gem 'rake'
+  gem "simplecov"
+  gem "codeclimate-test-reporter", "~> 1.0.0"
 end
