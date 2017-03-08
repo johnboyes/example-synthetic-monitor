@@ -2,11 +2,13 @@ module Foreman
   # Ensures that if a foreman process is started in a test, it is then killed on teardown
   module Test
     def before_setup
+      super
       @before_foreman_pids = foreman_pids
     end
 
     def after_teardown
       foreman_pids_to_kill.each { |pid| kill_foreman_process pid }
+      super
     end
 
     private

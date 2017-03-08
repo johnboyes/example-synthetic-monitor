@@ -9,6 +9,15 @@ require 'mirage/client'
 require 'json'
 require 'hashdiff'
 require 'foreman/test'
+require 'mirage/test'
+
+def set_mock_slack_endpoint
+  @mirage.put('slack', 'Notification received on Slack') { http_method 'POST' }
+end
+
+def set_mock_success_endpoint
+  @mirage.put('success', 'Success notification received') { http_method 'POST' }
+end
 
 def retryable
   tries = 0

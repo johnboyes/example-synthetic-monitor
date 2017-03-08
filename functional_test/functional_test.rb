@@ -2,14 +2,12 @@ require 'test_helper'
 
 # Functional tests which verify the monitoring functionality
 class FunctionalTest < Minitest::Test
-  include Foreman::Test
+  include Foreman::Test, Mirage::Test
 
   def setup
     ENV.store 'SLACK_WEBHOOK', 'http://localhost:7001/responses/slack'
-    Mirage.start
-    @mirage = Mirage::Client.new
-    @mirage.put('slack', 'Notification received on Slack') { http_method 'POST' }
-    @mirage.put('success', 'Success notification received') { http_method 'POST' }
+    set_mock_slack_endpoint
+    set_mock_success_endpoint
   end
 
   def test_run_app_which_then_runs_all_specs
@@ -35,7 +33,5 @@ class FunctionalTest < Minitest::Test
 
   def teardown
     @monitor_thread.exit
-    @mirage.clear
-    Mirage.stop
   end
 end
