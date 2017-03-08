@@ -11,5 +11,7 @@ group :test do
   gem 'minitest'
   gem 'mirage'
   gem 'rake'
+  gem 'pronto'
+  gem 'pronto-rubocop'
   gem 'simplecov'
 end
