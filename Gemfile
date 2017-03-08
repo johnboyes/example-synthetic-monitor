@@ -10,8 +10,8 @@ group :test do
   gem 'hashdiff'
   gem 'minitest'
   gem 'mirage'
-  gem 'rake'
   gem 'pronto'
-  gem 'pronto-rubocop'
+  gem 'pronto-rubocop', require: false
+  gem 'rake'
   gem 'simplecov'
 end
